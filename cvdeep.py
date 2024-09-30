@@ -45,7 +45,8 @@ unique_frames = 0
 common_frames = 0
 total_frames = 0
 
-# the network weights file ## object detection model that computes the output bounding box and object class from the input image
+ 
+#MobileNetSSD object detection model pre-trained using the Caffe framework. 
 
 protopath = 'MobileNetSSD_deploy.prototxt'
 modelpath = 'MobileNetSSD_deploy.caffemodel'
@@ -57,6 +58,7 @@ modelpath = 'MobileNetSSD_deploy.caffemodel'
 # Caffe is a deep learning framework made with expression, speed, and modularity in mind.
 
 # loading of caffe model and  used to load pre-trained Caffe models and accepts two arguments
+
 detector = cv2.dnn.readNetFromCaffe(prototxt=protopath, caffeModel=modelpath)
 
 CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",

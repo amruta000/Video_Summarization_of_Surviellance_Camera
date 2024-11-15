@@ -1,4 +1,4 @@
-# Video Summarization of Surviellance Camera
+# Video Summarization of Surviellance Camera by using MobileNet.SSD
 
 This project implements an automated video summarization system for surveillance camera footage using the MobileNet SSD (Single Shot Multibox Detector) deep learning model. The goal is to reduce the amount of video data to review by identifying and retaining key events, such as the presence of people or vehicles, while filtering out redundant information. This summarization process is achieved by detecting relevant objects in video frames and creating a concise video summary based on detected activity.
 

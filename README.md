@@ -4,14 +4,24 @@ This project implements an automated video summarization system for surveillance
 
 ## Features
 - **Real-Time Object Detection:** Uses MobileNet SSD to detect people, vehicles, and other objects of interest in each video frame.
-- **Efficient Video Summarization:** Automatically generates video summaries by selecting frames that contain significant events.
+  
+- **Motion Detection:** Identifies significant motion between frames to detect events, such as a person entering or exiting the scene.
+  
+- **Timestamping:** Tracks the timestamps of key frames for analysis and organization.
+  
+- **Efficient Processing:** The system processes frames only when necessary (i.e., when significant movement is detected), reducing redundant frames in the output.
+  
+- **Summarized Video:** Automatically generates a video summary with only the most relevant frames (e.g., frames with detected movement).
+  
 - **Activity-Based Filtering:** Only frames with detected objects of interest (e.g., people, vehicles) are included in the summary.
+  
 - **Lightweight and Efficient:** The solution is designed for real-time processing on devices with limited resources.
 
 ## Technologies Used
 - **MobileNet SSD:** A lightweight convolutional neural network model for object detection.
 - **OpenCV:** A library for computer vision tasks, such as reading video files, processing frames, and drawing bounding boxes.
 - **NumPy:** A library for handling numerical operations and data manipulation.
+- **Caffe:**  A deep learning framework used to load the MobileNet SSD model.
 - **Python 3:** The programming language used for implementing the solution.
 
 ## Installation
@@ -19,7 +29,13 @@ Prerequisites
 - Python 3.x
 - OpenCV
 - NumPy
-- TensorFlow (for MobileNet SSD model support)
+- Caffe (for MobileNet SSD model)
+
+## Installation
+Install required Python packages:
+
+pip install opencv-python numpy
+
   
 ## Workflow Diagram 
 **1. Input:** Surveillance video file.

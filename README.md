@@ -24,18 +24,57 @@ This project implements an automated video summarization system for surveillance
 - **Caffe:**  A deep learning framework used to load the MobileNet SSD model.
 - **Python 3:** The programming language used for implementing the solution.
 
-## Installation
-Prerequisites
+## Prerequisites Software
 - Python 3.x
 - OpenCV
 - NumPy
 - Caffe (for MobileNet SSD model)
 
 ## Installation
-Install required Python packages:
-
+1. Install required Python packages:
+```bash
 pip install opencv-python numpy
+```
+```bash
+pip install opencv-python
+```
+2. Download MobileNet SSD Files:
 
+You will need the following files for the MobileNet SSD object detection model:
+
+  ```MobileNetSSD_deploy.prototxt``` (Network architecture file)
+
+  ```MobileNetSSD_deploy.caffemodel``` (Pre-trained model weights)
+
+Place these files in the project directory.
+
+
+## How to Use
+### Running the Script
+1. Place your video file in the same directory as the script or provide its path when prompted.
+
+2. Run the script:
+
+```bash
+python summarize_video.py
+```
+
+3. Follow the prompts:
+
+- **Option 1:** Choose the input video file if you want to process a specific file.
+- **Option 2:** You can also use a live camera feed by selecting the default camera (CAM = 0).
+
+4. The script will:
+
+- Detect people in the video using MobileNet SSD.
+- Detect significant motion and store frames with moving objects.
+- Generate a summarized video with key frames.
+- Display the final summarized video and its timestamps.
+
+**Video Summarization**
+- After processing the video, the summarized video will be saved as final.MP4.
+- A list of timestamps corresponding to significant frames will be output.
+- The system will also display a preview of the summarized video after creation.
   
 ## Workflow Diagram 
 **1. Input:** Surveillance video file.
